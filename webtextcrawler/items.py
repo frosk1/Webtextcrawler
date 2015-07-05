@@ -10,3 +10,7 @@ import scrapy
 
 class KickerItem(scrapy.Item):
     teaser = scrapy.Field()
+
+
+class DieWelItem(scrapy.Item):
+    fazit = scrapy.Field()

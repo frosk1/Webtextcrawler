@@ -1,6 +1,7 @@
 #-*- coding: utf-8 -*-
 import re
 
+
 def filter(inputfile, outputfile):
     with open(inputfile, 'r') as inputs, open(outputfile, 'w') as output:
         count = 0
@@ -19,7 +20,11 @@ def html_decode(s):
             ('Ö', '\u00d6'),
             ('ü', '\u00fc'),
             ('Ü', '\u00dc'),
-            ('ß', '\u00df'))
+            ('ß', '\u00df'),
+            ('"','\\"'),
+            ('é','\u00e9'),
+            ('á','\u00e0'),
+            ('','\\r\\n'))
 
     for code in htmlCodes:
         s = s.replace(code[1], code[0])
